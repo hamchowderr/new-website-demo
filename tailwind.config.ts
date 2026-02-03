@@ -28,32 +28,23 @@ const config: Config = {
       },
       colors: {
         brand: {
-          teal: {
-            50: '#f0fafa',
-            100: '#d9f2f2',
-            200: '#b3e5e5',
-            300: '#8dd8d8',
-            400: '#67cbcb',
-            500: '#46b5b5',  // Primary brand color
-            600: '#3a9191',
-            700: '#2e6d6d',
-            800: '#224848',
-            900: '#162424',
+          primary: {
+            DEFAULT: '#0071e3', // Apple blue
+            light: '#0077ED',
+            dark: '#0056B3',
           },
-          brown: {
-            50: '#f7f6f6',
-            100: '#e9e7e7',
-            200: '#d3d0cf',
-            300: '#bdb8b7',
-            400: '#a7a09f',
-            500: '#5d5253',  // Secondary brand color
-            600: '#4a4142',
-            700: '#383132',
-            800: '#252021',
-            900: '#131011',
+          gray: {
+            50: '#fafafa',
+            100: '#f5f5f7',
+            200: '#e8e8ed',
+            300: '#d2d2d7',
+            400: '#86868b',
+            500: '#6e6e73',
+            600: '#515154',
+            700: '#424245',
+            800: '#1d1d1f',
+            900: '#000000',
           },
-          cream: '#faf9f7',
-          sage: '#9fb8ad',
         },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -90,13 +81,42 @@ const config: Config = {
         ring: 'hsl(var(--ring))',
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        lg: '18px',  // Apple-style rounded corners
+        md: '14px',
+        sm: '10px',
+        xl: '24px',
+        '2xl': '28px',
+      },
+      boxShadow: {
+        'apple-sm': '0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08)',
+        'apple-md': '0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.08)',
+        'apple-lg': '0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
+        'apple-xl': '0 12px 32px rgba(0, 0, 0, 0.12), 0 6px 12px rgba(0, 0, 0, 0.08)',
+      },
+      letterSpacing: {
+        tighter: '-0.02em',
+        tight: '-0.01em',
+        normal: '0',
+        wide: '0.01em',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-playfair)', 'serif'],
+        sans: [
+          'var(--font-inter)',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'SF Pro Display',
+          'SF Pro Text',
+          'system-ui',
+          'sans-serif'
+        ],
+        display: [
+          'var(--font-inter)',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'SF Pro Display',
+          'system-ui',
+          'sans-serif'
+        ],
       },
       keyframes: {
         'accordion-down': {

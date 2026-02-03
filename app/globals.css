@@ -5,47 +5,47 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 0 0% 11.4%; /* Apple's near-black */
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 0 0% 11.4%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 180 44% 50%; /* #46b5b5 teal */
+    --popover-foreground: 0 0% 11.4%;
+    --primary: 211 100% 44.5%; /* Apple blue #0071e3 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 14 17% 35%; /* #5d5253 brown */
-    --secondary-foreground: 0 0% 100%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 166 23% 66%; /* sage accent */
-    --accent-foreground: 240 10% 3.9%;
+    --secondary: 0 0% 96.5%; /* Light gray */
+    --secondary-foreground: 0 0% 11.4%;
+    --muted: 0 0% 96.1%; /* Apple's off-white */
+    --muted-foreground: 0 0% 43.1%; /* Mid-gray for secondary text */
+    --accent: 211 100% 44.5%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 180 44% 50%;
-    --radius: 0.5rem;
+    --border: 0 0% 91%; /* Very light gray border */
+    --input: 0 0% 91%;
+    --ring: 211 100% 44.5%;
+    --radius: 18px;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 8%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 8%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 180 44% 60%; /* Lighter teal for dark mode */
-    --primary-foreground: 240 10% 3.9%;
-    --secondary: 14 17% 45%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 166 23% 56%;
-    --accent-foreground: 0 0% 98%;
+    --background: 0 0% 11.4%; /* Apple's dark background */
+    --foreground: 0 0% 96%;
+    --card: 0 0% 14%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 14%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 211 100% 55%; /* Lighter blue for dark mode */
+    --primary-foreground: 0 0% 11.4%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 211 100% 55%;
+    --accent-foreground: 0 0% 11.4%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 180 44% 60%;
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 211 100% 55%;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -78,6 +78,10 @@
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {

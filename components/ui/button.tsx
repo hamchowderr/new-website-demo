@@ -4,25 +4,25 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-brand-teal-500 text-white hover:bg-brand-teal-600 hover:shadow-lg hover:shadow-brand-teal-500/20 hover:-translate-y-0.5",
+          "bg-brand-primary text-white hover:bg-brand-primary-light shadow-apple-sm hover:shadow-apple-md active:scale-[0.98]",
         outline:
-          "border-2 border-brand-teal-500 text-brand-teal-500 hover:bg-brand-teal-50 dark:hover:bg-brand-teal-900/20",
+          "border border-brand-gray-300 text-foreground hover:bg-brand-gray-100 dark:border-brand-gray-700 dark:hover:bg-brand-gray-800",
         ghost:
-          "hover:bg-muted hover:text-accent-foreground",
+          "hover:bg-brand-gray-100 hover:text-foreground dark:hover:bg-brand-gray-800",
         link:
-          "text-brand-teal-500 underline-offset-4 hover:underline",
+          "text-brand-primary underline-offset-4 hover:underline",
         secondary:
-          "bg-brand-brown-500 text-white hover:bg-brand-brown-600",
+          "bg-brand-gray-800 text-white hover:bg-brand-gray-900 shadow-apple-sm hover:shadow-apple-md",
       },
       size: {
-        default: "h-11 px-6 py-2",
-        sm: "h-9 px-4 text-xs",
-        lg: "h-14 px-8 text-base",
+        default: "h-11 px-6 py-2.5",
+        sm: "h-9 px-4 text-xs rounded-lg",
+        lg: "h-[52px] px-8 text-[17px] rounded-xl",
         icon: "h-10 w-10",
       },
     },
