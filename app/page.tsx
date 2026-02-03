@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Brain, Sparkles, Users, Shield, Clock } from "lucide-react";
+import { Heart, Brain, Sparkles, Users, Shield, Clock, Calendar, Video, CheckCircle, MessageSquare } from "lucide-react";
 import { services } from "@/lib/constants";
 
 export default function Home() {
@@ -58,6 +58,76 @@ export default function Home() {
           </div>
         </section>
 
+        {/* How It Works */}
+        <section className="py-20 md:py-24 bg-muted/50">
+          <div className="container">
+            <div className="max-w-6xl mx-auto space-y-12">
+              <div className="text-center space-y-4">
+                <h2 className="text-3xl md:text-4xl font-display font-bold">
+                  How Online Therapy Works
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Getting started is simple and convenient
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-brand-teal-500 to-brand-teal-600 text-white flex items-center justify-center text-2xl font-bold mx-auto shadow-lg">
+                    1
+                  </div>
+                  <div className="space-y-2">
+                    <MessageSquare className="h-8 w-8 text-brand-teal-500 mx-auto" />
+                    <h3 className="font-semibold text-lg">Reach Out</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Contact us to schedule your free consultation
+                    </p>
+                  </div>
+                </div>
+
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-brand-teal-500 to-brand-teal-600 text-white flex items-center justify-center text-2xl font-bold mx-auto shadow-lg">
+                    2
+                  </div>
+                  <div className="space-y-2">
+                    <Calendar className="h-8 w-8 text-brand-teal-500 mx-auto" />
+                    <h3 className="font-semibold text-lg">Schedule</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Choose a time that works for your busy schedule
+                    </p>
+                  </div>
+                </div>
+
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-brand-teal-500 to-brand-teal-600 text-white flex items-center justify-center text-2xl font-bold mx-auto shadow-lg">
+                    3
+                  </div>
+                  <div className="space-y-2">
+                    <Video className="h-8 w-8 text-brand-teal-500 mx-auto" />
+                    <h3 className="font-semibold text-lg">Connect</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Meet via secure video from the comfort of home
+                    </p>
+                  </div>
+                </div>
+
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-brand-teal-500 to-brand-teal-600 text-white flex items-center justify-center text-2xl font-bold mx-auto shadow-lg">
+                    4
+                  </div>
+                  <div className="space-y-2">
+                    <Sparkles className="h-8 w-8 text-brand-teal-500 mx-auto" />
+                    <h3 className="font-semibold text-lg">Heal & Grow</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Begin your journey toward lasting change
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid */}
         <section className="py-20 md:py-24">
           <div className="container">
@@ -86,6 +156,90 @@ export default function Home() {
                   </CardFooter>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-20 md:py-24 bg-muted/50">
+          <div className="container">
+            <div className="max-w-6xl mx-auto space-y-12">
+              <div className="text-center space-y-4">
+                <h2 className="text-3xl md:text-4xl font-display font-bold">
+                  Why Choose Sinclair Counseling
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Experience the difference of personalized, professional care
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Card className="border-brand-teal-500/20">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-brand-teal-500/20 to-brand-teal-500/10 flex items-center justify-center mb-4">
+                      <Shield className="h-6 w-6 text-brand-teal-500" />
+                    </div>
+                    <CardTitle className="text-xl">Licensed & Experienced</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Fully licensed professional counselor with specialized training in trauma, addiction,
+                      and evidence-based therapeutic approaches.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-brand-teal-500/20">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-brand-teal-500/20 to-brand-teal-500/10 flex items-center justify-center mb-4">
+                      <Video className="h-6 w-6 text-brand-teal-500" />
+                    </div>
+                    <CardTitle className="text-xl">Convenient Online Sessions</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Meet from anywhere in Utah via secure, HIPAA-compliant video conferencing.
+                      No commute, no waiting rooms—just quality care.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-brand-teal-500/20">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-brand-teal-500/20 to-brand-teal-500/10 flex items-center justify-center mb-4">
+                      <Heart className="h-6 w-6 text-brand-teal-500" />
+                    </div>
+                    <CardTitle className="text-xl">Personalized Treatment</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Every client is unique. We tailor our approach to your specific needs, goals,
+                      and circumstances for the most effective care.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-brand-teal-500/20">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-brand-teal-500/20 to-brand-teal-500/10 flex items-center justify-center mb-4">
+                      <CheckCircle className="h-6 w-6 text-brand-teal-500" />
+                    </div>
+                    <CardTitle className="text-xl">Proven Results</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Using evidence-based therapies shown to be effective for anxiety, depression,
+                      trauma, and other mental health challenges.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="text-center">
+                <Button size="lg" asChild>
+                  <Link href="/about">Learn More About Our Approach</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
