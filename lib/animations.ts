@@ -4,9 +4,9 @@ import { Variants } from "framer-motion";
  * Custom easing curves for animations
  */
 export const easings = {
-  easeOut: [0.22, 1, 0.36, 1],
-  easeInOut: [0.45, 0, 0.55, 1],
-  spring: { type: "spring", damping: 20, stiffness: 100 },
+  easeOut: [0.22, 1, 0.36, 1] as const,
+  easeInOut: [0.45, 0, 0.55, 1] as const,
+  spring: { type: "spring", damping: 20, stiffness: 100 } as const,
 };
 
 /**
