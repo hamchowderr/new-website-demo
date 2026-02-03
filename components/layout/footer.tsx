@@ -44,11 +44,6 @@ export function Footer() {
                   Email Us
                 </a>
               </li>
-              <li>
-                <a href={siteConfig.links.phone} className="hover:text-brand-teal-500 transition-colors">
-                  Call Us
-                </a>
-              </li>
             </ul>
           </div>
         </div>
