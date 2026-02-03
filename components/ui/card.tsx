@@ -8,19 +8,14 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "relative rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden group",
-      "transition-all duration-300",
-      "hover:shadow-md hover:shadow-brand-teal-500/10 hover:-translate-y-1",
+      "relative rounded-2xl border border-brand-gray-200 bg-card text-card-foreground overflow-hidden group",
+      "shadow-apple-sm transition-all duration-300 ease-out",
+      "hover:shadow-apple-lg hover:border-brand-gray-300",
+      "dark:border-brand-gray-700 dark:hover:border-brand-gray-600",
       className
     )}
     {...props}
-  >
-    {/* Subtle glow effect on hover */}
-    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-teal-500/5 to-transparent" />
-    </div>
-    <div className="relative">{props.children}</div>
-  </div>
+  />
 ));
 Card.displayName = "Card";
 
@@ -42,7 +37,7 @@ const CardTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h3
     ref={ref}
-    className={cn("font-display text-2xl font-semibold leading-none tracking-tight", className)}
+    className={cn("font-semibold text-2xl leading-tight tracking-tight text-brand-gray-900 dark:text-white", className)}
     {...props}
   />
 ));
